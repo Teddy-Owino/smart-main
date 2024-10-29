@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payments</title>
+</head>
+<body>
+    <h1>Payments List</h1>
+    <table border="1">
+        <tr>
+            <th>Payment ID</th>
+            <th>Customer</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+        {% for payment in payments %}
+        <tr>
+            <td>{{ payment[0] }}</td>
+            <td>{{ payment[3] }}</td>
+            <td>{{ payment[1] }}</td>
+            <td>{{ payment[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/admin/add_payment">Add Payment</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Payment</title>
+</head>
+<body>
+    <h1>Add Payment</h1>
+    <form method="POST">
+        <label for="customer_id">Select Customer:</label>
+        <select name="customer_id" id="customer_id" required>
+            {% for customer in customers %}
+            <option value="{{ customer[0] }}">{{ customer[1] }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="amount">Amount:</label>
+        <input type="text" name="amount" required>
+        <br>
+        <label for="payment_date">Payment Date:</label>
+        <input type="date" name="payment_date" required>
+        <br>
+        <input type="submit" value="Add Payment">
+    </form>
+    <a href="/mpesa">Back to Payments</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>
+
+</html>
